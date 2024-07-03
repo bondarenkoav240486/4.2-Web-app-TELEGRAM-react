@@ -41,6 +41,15 @@ const ProductList = () => {
             },
             body: JSON.stringify(data)
         })
+        fetch('http://ec2-18-159-169-138.eu-central-1.compute.amazonaws.com:8000/web-data', {
+            // fetch('http://159.224.64.155:8000/web-data', {
+                // http://localhost:3000/
+                method: 'GET',
+                // headers: {
+                    // 'Content-Type': 'application/json',
+                // },
+                // body: JSON.stringify(data)
+            })
     }, [addedItems])
 
     useEffect(() => {
