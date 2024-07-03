@@ -25,7 +25,8 @@ const ProductList = () => {
     const [addedItems, setAddedItems] = useState([]);
     const { tg, queryId } = useTelegram();
 
-    fetch('https://ec2-18-159-169-138.eu-central-1.compute.amazonaws.com:8000/web-data', {
+    // fetch('https://ec2-18-159-169-138.eu-central-1.compute.amazonaws.com:8000/web-data', {
+    fetch('http://18.159.169.138:8000/web-data', {
         // fetch('http://159.224.64.155:8000/web-data', {
         // http://localhost:3000/
         method: 'GET',
@@ -51,7 +52,7 @@ const ProductList = () => {
             },
             body: JSON.stringify(data)
         })
-        
+
     }, [addedItems])
 
     useEffect(() => {
